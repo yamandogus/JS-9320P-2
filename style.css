@@ -1,0 +1,106 @@
+body{
+    background: url(star2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.star_header{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, red serif;
+    padding: 10px 0;
+    background: linear-gradient(rgb(158,171,163));
+    /* backdrop-filter: blur(10px); */
+}
+
+h1::before{
+    margin-right: 10px;
+    content: "⚔";
+    box-shadow: 2px 2px 7px 1px #25130d;
+}
+h1::after{
+    margin-left: 10px;
+    content: "⚔";
+    box-shadow: 2px 2px 7px 1px #25130d;
+}
+
+.star_header h1{
+    backdrop-filter: blur(10px); 
+}
+
+.btn{
+    color: white;
+    font-weight: bolder!important;
+    background: rgb(27,137,218);
+    margin: auto;
+    width: fit-content;
+    text-align: center!;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px 1px #25130d;
+    animation: ease;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+    transition: 0.9s;
+}
+
+.btn_hide{
+    background: linear-gradient(90deg, rgba(124,199,203,1) 1%, rgba(204,37,37,1) 9%, rgba(89,12,12,1) 93%, rgba(95,242,249,1) 100%);
+}
+
+
+#homeworlds-filter-container{
+    display: flex!important;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: rgb(80, 77, 77);
+    color: white!important;
+    font-weight: bolder;
+    border-radius: 10px;
+    background: linear-gradient(247deg, rgba(101,94,94,1) 10%, rgba(56,53,53,1) 38%, rgba(179,85,86,1) 77%, rgba(101,94,94,1) 100%);
+}
+
+#homeworlds-filter-container label:hover {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+
+label:hover{
+    transform: scale(1.1);
+    transition: 0.9s;
+} 
+
+
+
+/*cards*/
+
+#characters-row .card_characters {
+    margin-top: 2rem;
+    display: flex;
+    color: white;
+    margin-left: 20px;
+    box-shadow: 2px 2px 2px  rgb(110, 105, 105);
+    height: 370px; 
+    margin-top: 15px;
+    transition: transform 0.8s ease;
+    background: linear-gradient(199deg, rgb(253, 251, 251) 19%, rgb(80, 74, 74) 63%, rgb(85, 74, 74) 91%);
+}
+
+.img-fluidd{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 250px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+
+
+#characters-row .card_characters:hover{
+    transform: scale(1.03);
+}
