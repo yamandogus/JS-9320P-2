@@ -123,32 +123,19 @@ const characters = {
   ],
 };
 
-console.log(characters);
-
 const homeworldsRaw = characters.characters.map((character) =>
-  character.homeworld ? character.homeworld : "other" // homeworld degeri olmayan karakterler other degerini alır
+  character.homeworld ? character.homeworld : "other" 
 );
 
-console.log(homeworldsRaw);
-
 const homeworldsUnique = [...new Set(homeworldsRaw)];
-// veri tekrarlanması engelleniyor
-
 console.log(homeworldsUnique);
-
 const homeworldsLowercase = homeworldsUnique.map((element) => {
-  //array içindeki büyük harfli değerleri küçük harfe çevirdi
   return element.toLowerCase();
 });
 
-console.log(homeworldsLowercase);
-
 const homeworlds = homeworldsLowercase;
 
-console.log(homeworlds);
-
 function charactersFilter() {
-  // radio butonları oluturuldu
   const markup = document.getElementById("wrapper");
   for (let i = 0; i < homeworlds.length; i++) {
     let input = ` 
@@ -160,14 +147,13 @@ function charactersFilter() {
       </div>
     `;
     document.getElementById("homeworlds-filter-container").innerHTML += input;
-    // radio butonnları div'in içine atıldı
   }
 }
 
-let filteredHomeworld = null; // radio butonlarında seçilen homeworlds değeri atanır.
+let filteredHomeworld = null; 
 
 function handleHomeworldSelection(event) {
-  filteredHomeworld = event.target.value; // tıkladığım radyo butonunun value suna erişiyorum
+  filteredHomeworld = event.target.value; 
   const filteredCharacters = characters.characters.filter(
     (character) => character.homeworld.toLowerCase() === filteredHomeworld
   );
@@ -193,18 +179,19 @@ function handleHomeworldSelection(event) {
 const characterButton = document.getElementById("toggler-button");
 let show_characters = false;
 
+const filterContainer = document.getElementById("homeworlds-filter-container")
+
 function showButton() {
   if (show_characters == false) {
     characterButton.innerText = "Karakterleri Gizle";
     characterButton.style.backgroundColor = "rgba(204,37,37,1)";
+    characterButton.style.color="white"
+    filterContainer.style.padding="15px"
     charactersFilter();
     showElement();
     const inputs = document.querySelectorAll(".form-check-input");
-    // .form-check-input classına sahip bütün elementler seçildi
     inputs.forEach((input) => {
       input.addEventListener("change", handleHomeworldSelection);
-      // .form-check-input classına sahip tüm elementleri(inputs) forEach ile dönüyoruz.
-      // add-listener ile dinleyerek change olduğunda handleHomeworldSelection fonksiyonunu çağırıyoruz.
     });
   } else {
     characterButton.innerText = "Karakterleri Göster";

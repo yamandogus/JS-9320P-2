@@ -17,12 +17,12 @@ body{
 h1::before{
     margin-right: 10px;
     content: "⚔";
-    box-shadow: 2px 2px 7px 1px #25130d;
+    box-shadow: 2px 2px 7px 1px #c23d3d;
 }
 h1::after{
     margin-left: 10px;
     content: "⚔";
-    box-shadow: 2px 2px 7px 1px #25130d;
+    box-shadow: 2px 2px 7px 1px #c23d3d;
 }
 
 .star_header h1{
@@ -52,16 +52,15 @@ h1::after{
 
 
 #homeworlds-filter-container{
-    display: flex!important;
+    display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
     justify-content: space-between;
-    background-color: rgb(80, 77, 77);
     color: white!important;
     font-weight: bolder;
     border-radius: 10px;
-    background: linear-gradient(247deg, rgba(101,94,94,1) 10%, rgba(56,53,53,1) 38%, rgba(179,85,86,1) 77%, rgba(101,94,94,1) 100%);
+    background: url("https://static.vecteezy.com/system/resources/previews/007/209/951/non_2x/abstract-background-modern-technology-banner-digital-backdrop-cover-graphic-template-wallpaper-free-photo.jpg")
 }
 
 #homeworlds-filter-container label:hover {
@@ -74,20 +73,17 @@ label:hover{
     transition: 0.9s;
 } 
 
-
-
 /*cards*/
-
 #characters-row .card_characters {
     margin-top: 2rem;
     display: flex;
     color: white;
     margin-left: 20px;
-    box-shadow: 2px 2px 2px  rgb(110, 105, 105);
     height: 370px; 
     margin-top: 15px;
-    transition: transform 0.8s ease;
-    background: linear-gradient(199deg, rgb(253, 251, 251) 19%, rgb(80, 74, 74) 63%, rgb(85, 74, 74) 91%);
+    transition: all 0.4s;
+    background: rgb(45, 45, 45);
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
 }
 
 .img-fluidd{
@@ -99,8 +95,9 @@ label:hover{
     border-radius: 10px;
 }
 
-
-
 #characters-row .card_characters:hover{
-    transform: scale(1.03);
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 0px 0px 1px 1px  rgba(0, 0, 0, 0.705);
 }
