@@ -104,22 +104,14 @@ label:hover{
 
 @media (max-width: 598px) {
     h1{
-        color: white!important;
+        font-size: 20px!important;
     }
     .btn{
-        box-shadow: 2px 2px 7px 1px #f5f2f1;
+        box-shadow: 2px 2px 7px 1px #140d06;
     }
     .card_characters {
         width: 100%;
         margin-top: 15px!important;
         margin: 10px auto!important;
-    }
-    body{
-        background: url("https://i.pinimg.com/originals/1b/df/9a/1bdf9a04412fe992fdd590ccb842ac33.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        transition: background 1s ease-in-out;
     }
 }
